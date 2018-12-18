@@ -1,4 +1,5 @@
 <?php
+
     require_once 'Lib/Base_Controller.php';
     require_once 'Lib/Base_Model.php';
     require_once 'Lib/Base_View.php';
@@ -9,14 +10,15 @@
     
     
     $file = "Controller/".ucfirst($controllerURL)."Controller.php";
-    if(file_exists($file)){
-        
-        require_once "{$file}";
+
+    if(file_exists($file))
+    {
+       require_once "{$file}";
        $controller = ucfirst($controllerURL)."Controller";
        $c = new $controller();
        $action = strtolower($actionURL);
        $c->$action();
-
-    }else {
+    }else 
+    {
         echo "File không tồn tại";
     }

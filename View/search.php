@@ -16,11 +16,11 @@
                 </tr>
 
                 <tr>
-                    <td><?php echo "1" ?></td>
-                    <td><?php echo $this->data->id; ?></td>
-                    <td><?php echo $this->data->fullname; ?></td>
-                    <td><?php echo $this->data->address; ?></td>
-                    <td><?php echo ($this->data->prioritize == 1) ? 'Ưu tiên' : 'Không ưu tiên'; ?></td>
+                    <td> <?php echo "1" ?> </td>
+                    <td> <?php echo $this->data->id; ?> </td>
+                    <td> <?php echo $this->data->fullname; ?> </td>
+                    <td> <?php echo $this->data->address; ?> </td>
+                    <td> <?php echo ($this->data->prioritize == 1) ? 'Ưu tiên' : 'Không ưu tiên'; ?> </td>
                     <td class="text-center">
                         <a href="index.php?controller=score&action=score&id=<?php echo $this->data->id ?>"><i class="fa fa-file-archive-o" aria-hidden="true" title="Nhập điểm"></i></a>
                         <a href="index.php?controller=index&action=remove&id=<?php echo $this->data->id ?>"><i class="fa fa-trash" aria-hidden="true" title="Xóa thí sinh"></i></a>

@@ -13,10 +13,10 @@ class ScoreController extends Controller {
             $this->view->data = $data;
             $this->view->score = $data2;
             $this->view->render('score');
-        }else{
+        }else
+        {
             header('location:index.php?controller=index&action=index');
         }
-       
     }
 
     public function setScore(){
@@ -24,7 +24,6 @@ class ScoreController extends Controller {
     	require_once 'Model/ScoreModel.php';
     	$this->model = new ScoreModel;
     	if(isset($_POST['submit'])){
-
     		$class_id = null;
 
 	    	if($_POST['class'] == 'table1'){
@@ -51,10 +50,6 @@ class ScoreController extends Controller {
 	    			$score2 = $_POST['score32'];
 	    			$score3 = $_POST['score33'];
 	    			break;
-	    		
-	    		default:
-	    			# code...
-	    			break;
 	    	}
 
 	    	$this->model->setData($score1, $score2, $score3, $class_id, $students_id);
@@ -64,10 +59,6 @@ class ScoreController extends Controller {
 	    	}else{
 	    		header('location:index.php?controller=score&action=score');
 	    	}
-
-
-
-
     	}
     	
     }

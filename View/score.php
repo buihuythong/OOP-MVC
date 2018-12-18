@@ -27,17 +27,20 @@
 						$score32 = null;
 						$score33 = null;
 						if(isset($this->score)){
-							if($this->score->class_id == 1){
+							if($this->score->class_id == 1)
+							{
 								$table1Select = 'selected';
 								$score11 = $this->score->score1;
 								$score12 = $this->score->score2;
 								$score13 = $this->score->score3;
-							}else if ($this->score->class_id == 2 ){
+							}else if ($this->score->class_id == 2 )
+							{
 								$table2Select = 'selected';
 								$score21 = $this->score->score1;
 								$score22 = $this->score->score2;
 								$score23 = $this->score->score3;
-							}else{
+							}else
+							{
 								$table3Select = 'selected';
 								$score31 = $this->score->score1;
 								$score32 = $this->score->score2;
@@ -48,9 +51,9 @@
 						
 					 ?>
 					<select class="form-control" name="class" onchange="changeClass(this.value)">
-					  <option value="table1" <?php echo $table1Select ?>>Khối A</option>
-					  <option value="table2" <?php echo $table2Select ?>>Khối B</option>
-					  <option value="table3" <?php echo $table3Select ?>>Khối C</option>
+					  <option value="table1" <?php echo $table1Select ?> >Khối A</option>
+					  <option value="table2" <?php echo $table2Select ?> >Khối B</option>
+					  <option value="table3" <?php echo $table3Select ?> >Khối C</option>
 					</select>
 					<br>
 				<table class="table table-bordered" id="table1">

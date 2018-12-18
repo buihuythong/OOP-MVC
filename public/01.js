@@ -7,6 +7,7 @@ function hiddenAll(){
 	document.querySelector("#table2").classList.add('hidden');
 	document.querySelector("#table3").classList.add('hidden');
 }
+
 function changeClass(id){
 	hiddenAll();
 	let elm = document.getElementById(id);
@@ -21,11 +22,13 @@ if(sel == "table1") {
 	let elm = document.getElementById("table1");
 	elm.classList.remove("hidden");
 }
+
 if(sel == "table2") {
 	hiddenAll();
 	let elm = document.getElementById("table2");
 	elm.classList.remove("hidden");
 }
+
 
 if(sel == "table3") {
 	hiddenAll();

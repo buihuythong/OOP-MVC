@@ -22,28 +22,28 @@
                     <?php
                       $ut = null;
                       $kut = null;
-                      if($this->data->prioritize == 1){
+                      if($this->data->prioritize == 1)
+                      {
                         $ut = "checked";
-                      }else{
+                      }else
+                      {
                         $kut = "checked";
                       }
                      ?>
                     <label>
-                      <input type="radio" name="prioritize" id="optionsRadios1" value="1" <?php echo $ut; ?>>
-                      Diện ưu tiên
+                      <input type="radio" name="prioritize" id="optionsRadios1" value="1" <?php echo $ut; ?> >Diện ưu tiên
                     </label>
                   </div>
                   <div class="radio">
                     <label>
-                      <input type="radio" name="prioritize" id="optionsRadios2" value="0" <?php echo $kut; ?>>
-                      Diện không ưu tiên
+                      <input type="radio" name="prioritize" id="optionsRadios2" value="0" <?php echo $kut; ?>>Diện không ưu tiên
                     </label>
                   </div>
 
                 </div>
                 
                 <button type="submit" class="btn btn-default">Sửa thí sinh</button>
-              </form>
+            </form>
         </div>
     </div>
 </div>
