@@ -19,16 +19,19 @@ class ScoreModel extends Model {
 	public function addScore(){
 
 		$data = $this->getRowFromCodition('manage_student_score','students_id='.$this->students_id);
-
-		if($data == 0){
+		if($data == 0)
+		{
 			$this->sql = "INSERT INTO `manage_student_score`(`score1`,`score2`,`score3`, `class_id`, `students_id`) VALUES ('$this->score1', '$this->score2', '$this->score3', '$this->class_id', '$this->students_id')";
-		}else{
+		}else
+		{
 			$this->sql = "UPDATE `manage_student_score` SET `score1`='$this->score1',`score2`='$this->score2',`score3`='$this->score3',`class_id` ='$this->class_id' WHERE `students_id` = '$this->students_id'";
 		}
 		
-		if($this->conn->exec($this->sql)){
+		if($this->conn->exec($this->sql))
+		{
 			return true;
-		}else{
+		}else
+		{
 			return false;
 		}
 	}
@@ -37,15 +40,17 @@ class ScoreModel extends Model {
 		$this->sql = "SELECT * FROM `$row` WHERE $condition";
 	    $stmt = $this->conn->prepare($this->sql); 
 	    $stmt->setFetchMode(PDO::FETCH_OBJ);
-	      $stmt->execute();
-	      while($row = $stmt->fetch()){
+	    $stmt->execute();
+	    while($row = $stmt->fetch()){
 	        $data[] = $row;
-	      }
-	      if(!empty($data[0])){
-	      	 return $data[0];
-	      	}else{
-	      		return null;
-	      	}
+	    }
+	    if(!empty($data[0]))
+	    {
+	      	return $data[0];
+	    }else
+	    {
+	        return null;
+	    }
 	     
 	}
 
