@@ -8,7 +8,9 @@
 
 #-------------------------------------------Config Database---------------------------------------------------------
 
-define('DATABASE_HOST', 'localhost');
-define('DATABASE_USER', 'root');
-define('DATABASE_PASS', '');
-define('DATABASE_NAME','manage_student');
+class Config {
+	static $database_host = 'localhost';
+	static $database_user = 'root';
+	static $database_pass = '';
+	static $database_name = 'manage_student';
+}

@@ -7,6 +7,8 @@ class IndexModel extends Model {
 	private $address;
 	private $prioritize;
 
+	
+
 	public function setData($id, $fullname, $address, $prioritize ){
 		$this->id = $id;
 		$this->fullname = $fullname;
